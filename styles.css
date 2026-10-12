@@ -1,0 +1,225 @@
+body {
+        background-color: rgb(20, 171, 20);
+}
+
+header {
+    color: white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2px;
+    margin: 8px;
+    margin-bottom: 23px;
+    font-size: 20px;
+}
+
+.bianco {
+    background-color: white;
+    border-radius: 7px;
+    margin: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 80px;
+}
+
+.bianco img {
+    width: 50px;
+    padding-left: 14px;
+    padding-top: 22px;
+}
+
+.bianco h1 {
+    font-size: 22px;
+    margin-bottom: -14px;
+}
+
+.qr {
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 7px;
+    background-color: rgb(236, 235, 235);
+    margin-left: 0px;
+    margin-right: 15px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -5px;
+    padding-top: 8px;
+}
+
+#ticket {
+    width: 25px;
+    margin-top: -24px;
+    padding-left: 12px;
+}
+
+#arr {
+    width: 15px;
+    margin-top: -21px;
+    padding-right: 20px;
+} 
+
+.title p {
+    margin-left: -46px;
+}
+
+#qr {
+    display: block;
+    width: 350px;
+    max-width: none;
+    padding: 0;
+    margin: 0 auto;
+    margin-left: -10px;
+    margin-top: -30px;
+}
+
+#cod {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: -10px;
+    color: rgb(32, 34, 150);
+    font-weight: bold;
+}
+
+.fin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 14px 15px;
+}
+
+.ora,
+.luch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fin img {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+#orologio,
+.luch p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(32, 34, 150);
+    font-variant-numeric: tabular-nums;
+}
+
+.luch p {
+    font-size: 17px;
+}
+
+.onde {
+    --p: 26px;   /* periodo orizzontale (distanza tra due cerchi) */
+    --r: 14px;   /* raggio dei cerchi, leggermente > p/2 per la sovrapposizione */
+    position: relative;
+    overflow: hidden;
+    height: calc(var(--r) + var(--p) * 1.5 + 3px);
+    margin-right: 15px;
+    background-color: #fff;
+}
+
+.onde-pista {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--p) * -1);
+    width: calc(100% + var(--p));
+    background-repeat: repeat-x;
+    background-size: var(--p) 100%;
+    background-image:
+        /* fila 4: bianca */
+        radial-gradient(circle var(--r) at 50% calc(var(--r) + var(--p) * 1.5), #fff calc(var(--r) - 0.5px), transparent var(--r)),
+        /* fila 3: lavanda scuro */
+        radial-gradient(circle var(--r) at 50% calc(var(--r) + var(--p)), #b9b6e0 calc(var(--r) - 0.5px), transparent var(--r)),
+        /* fila 2: lavanda medio */
+        radial-gradient(circle var(--r) at 50% calc(var(--r) + var(--p) * 0.5), #cdcce6 calc(var(--r) - 0.5px), transparent var(--r)),
+        /* fila 1: grigio chiaro */
+        radial-gradient(circle var(--r) at 50% var(--r), #dfdfea calc(var(--r) - 0.5px), transparent var(--r));
+    background-position:
+        0 0,
+        calc(var(--p) / 2) 0,
+        0 0,
+        calc(var(--p) / 2) 0;
+    animation: scorri 0.28s linear infinite;
+    will-change: transform;
+}
+
+@keyframes scorri {
+    to { transform: translateX(var(--p)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .onde-pista { animation: none; }
+}
+
+.attivato {
+    background-color: rgb(20, 171, 20);
+    color: white;
+    border-radius: 7px;
+    padding: 18px 15px;
+    margin: 14px 15px 0 0;
+    font-size: 15px;
+}
+
+.dettagli {
+    margin-right: 15px;
+    padding-bottom: 20px;
+}
+
+.etichetta {
+    margin: 16px 0 4px;
+    font-size: 15px;
+    color: rgb(70, 70, 70);
+}
+
+.valore {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.riga {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.costo {
+    margin-top: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    font-size: 22px;
+}
+
+.costo span:last-child {
+    font-weight: 600;
+}
+
+.dett,
+.codice {
+    margin-top: 14px;
+    font-size: 15px;
+}
+
+.leggi {
+    color: rgb(32, 34, 150);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.codice {
+    color: rgb(110, 110, 110);
+}

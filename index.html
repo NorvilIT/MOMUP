@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MOMUP</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <span class="c">&lt;</span>
+            <span>Ticket attivo</span>
+            <span></span>
+        </header>
+        <div class="bianco">
+            <img src="logo.png" alt="">
+            <h1>CORSA CLASSE 1</h1>
+            <p>Non da diritto a viaggiare sulla linea Treviso <br>- Padova. Non da diritto a viaggiare nella <br>
+            linea Treviso - Portogruaro. ATTENZIONE: il <br>biglietto è utilizzabile ENTRO LE 24 ORE <br> dall'acquisto.</p>
+            <div class="qr">
+                <div class="title">
+                    <img src="logo-b.svg" alt="" id="ticket">
+                    <p>Controllo e validazione</p>
+                    <img src="freccia-su.svg" alt="" id="arr">
+                </div>
+                <img src="qr.png" alt="" id="qr">
+                <p id="cod">Ingrandisci QRCode</p>
+                <div class="fin">
+                    <div class="ora">
+                        <img src="orologio.svg" alt="" id="oro">
+                        <div id="orologio"></div>
+                    </div>
+                    <div class="luch">
+                        <img src="lock.svg" alt="">
+                        <p>034</p>
+                    </div>
+                </div>
+            </div>
+            <div class="onde">
+                <div class="onde-pista"></div>
+            </div>
+            <div class="attivato">
+    Attivato il: <strong id="d-attivazione"></strong>
+</div>
+<div class="dettagli">
+    <p class="etichetta">Emesso il:</p>
+    <p class="valore" id="d-emissione"></p>
+    <div class="riga costo">
+        <span>Costo</span>
+        <span id="d-costo"></span>
+    </div>
+    <div class="riga dett">
+        <strong>Dettagli</strong>
+        <a href="#" class="leggi">Leggi tutto &#8964;</a>
+    </div>
+    <div class="riga codice">
+        <span>Codice Ticket:</span>
+        <span id="d-codice"></span>
+    </div>
+</div>
+        </div>
+    </body>
+</html>
