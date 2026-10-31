@@ -3,62 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MOMUP</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Biglietti</title>
         <script src="script.js" defer></script>
+        <style>
+            body {
+                background-color: rgb(218, 215, 205);
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                color: rgb(58, 90, 64);
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin-top: 40px
+            }
+
+            h2 {
+                text-align: center;
+                color: rgb(88, 129, 87);
+            }
+            
+            .destinazioni {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+            }
+
+            .div {
+                background-color: rgb(178, 189, 159);
+                width: 93%;
+                margin: auto;
+                height: 150px auto;
+                border: 1px solid #3e5148;
+                border-radius: 15px;
+                margin-top: 40px;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgb(52, 78, 65);
+                font-weight: 800;
+            }
+
+            p {
+                font-size: 35px;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+            }
+            
+        </style>
     </head>
     <body>
-        <header>
-            <span class="c">&lt;</span>
-            <span>Ticket attivo</span>
-            <span></span>
-        </header>
-        <div class="bianco">
-            <img src="logo.png" alt="">
-            <h1>CORSA CLASSE 1</h1>
-            <p>Non da diritto a viaggiare sulla linea Treviso <br>- Padova. Non da diritto a viaggiare nella <br>
-            linea Treviso - Portogruaro. ATTENZIONE: il <br>biglietto è utilizzabile ENTRO LE 24 ORE <br> dall'acquisto.</p>
-            <div class="qr">
-                <div class="title">
-                    <img src="logo-b.svg" alt="" id="ticket">
-                    <p>Controllo e validazione</p>
-                    <img src="freccia-su.svg" alt="" id="arr">
-                </div>
-                <img src="qr.png" alt="" id="qr">
-                <p id="cod">Ingrandisci QRCode</p>
-                <div class="fin">
-                    <div class="ora">
-                        <img src="orologio.svg" alt="" id="oro">
-                        <div id="orologio"></div>
-                    </div>
-                    <div class="luch">
-                        <img src="lock.svg" alt="">
-                        <p>034</p>
-                    </div>
-                </div>
+        <h1>Hey</h1>
+        <h2>Scegli il tuo biglietto</h2>
+        <div class="destinazioni">
+            <div class="ca div">
+                <a href="ca.html"><p>Cadoneghe</p></a>
             </div>
-            <div class="onde">
-                <div class="onde-pista"></div>
+            <div class="tr div">
+                <a href="tr.html"><p>Treviso</p></a>
             </div>
-            <div class="attivato">
-    Attivato il: <strong id="d-attivazione"></strong>
-</div>
-<div class="dettagli">
-    <p class="etichetta">Emesso il:</p>
-    <p class="valore" id="d-emissione"></p>
-    <div class="riga costo">
-        <span>Costo</span>
-        <span id="d-costo"></span>
-    </div>
-    <div class="riga dett">
-        <strong>Dettagli</strong>
-        <a href="#" class="leggi">Leggi tutto &#8964;</a>
-    </div>
-    <div class="riga codice">
-        <span>Codice Ticket:</span>
-        <span id="d-codice"></span>
-    </div>
-</div>
+            <div class="ro div">
+                <a href="ro.html"><p>Roncaglia (in fase di lavorazione)</p></a>
+            </div>
         </div>
     </body>
 </html>
