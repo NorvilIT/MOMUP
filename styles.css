@@ -1,5 +1,5 @@
 body {
-        background-color: rgb(70, 120, 85);
+        background-color: rgb(70, 165, 85);
 }
 
 header {
@@ -166,7 +166,7 @@ header {
 }
 
 .attivato {
-    background-color: rgb(70, 120, 85);
+    background-color: rgb(70, 160, 85);
     color: white;
     border-radius: 7px;
     padding: 18px 15px;
